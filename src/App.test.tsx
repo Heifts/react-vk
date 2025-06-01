@@ -4,7 +4,7 @@ import App from './App';
 import { http, HttpResponse } from 'msw';
 import { setupServer } from 'msw/node';
 
-// Моковые данные
+
 const mockPosts = [
   {
     id: "1",
@@ -45,7 +45,7 @@ test('renders table with mock data', async () => {
 test('handles form submission', async () => {
   render(<App />);
   
-  // Находим элементы формы
+
   const titleInput = screen.getByLabelText('Title');
   const authorInput = screen.getByLabelText('Author');
   const contentInput = screen.getByLabelText('Content');
@@ -53,17 +53,17 @@ test('handles form submission', async () => {
   const dateInput = screen.getByLabelText('Date');
   const submitButton = screen.getByRole('button', { name: /submit/i });
 
-  // Заполняем форму
+
   await userEvent.type(titleInput, 'New Post');
   await userEvent.type(authorInput, 'New Author');
   await userEvent.type(contentInput, 'Content of new post');
   await userEvent.type(categoryInput, 'New Category');
   await userEvent.type(dateInput, '2023-01-02');
 
-  // Отправляем форму
+
   await userEvent.click(submitButton);
 
-  // Проверяем, что новый пост появился в таблице
+ 
   await waitFor(() => {
     expect(screen.getByText('New Post')).toBeInTheDocument();
   });

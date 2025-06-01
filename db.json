@@ -1,7 +1,7 @@
 {
   "posts": [
-    { 
-      "id": "1", 
+    {
+      "id": "1",
       "title": "First Post",
       "author": "John Doe",
       "content": "This is the content of the first post",
@@ -9,14 +9,22 @@
       "date": "2023-01-01",
       "views": 100
     },
-    { 
-      "id": "2", 
+    {
+      "id": "2",
       "title": "Second Post",
       "author": "Jane Smith",
       "content": "Content for the second post goes here",
       "category": "Science",
       "date": "2023-01-02",
       "views": 150
+    },
+    {
+      "id": "0cd8",
+      "title": "title",
+      "author": "hello",
+      "content": "mu name is Ilia",
+      "category": "russia",
+      "date": "1997-08-03"
     }
   ]
 }
